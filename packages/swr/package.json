@@ -12,7 +12,7 @@
     "clean": "rm -rf lib dist types build tsconfig.tsbuildinfo",
     "fix-lint": "eslint . --fix && dprint fmt --config $(find-up dprint.json)",
     "lint": "eslint . && dprint check  --config $(find-up dprint.json)",
-    "transpile": "tsc-absolute"
+    "transpile": "tsc-absolute && tsc-absolute --project test/tsconfig.json"
   },
   "dependencies": {},
   "peerDependencies": {

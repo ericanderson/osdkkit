@@ -1,11 +1,5 @@
 {
   "extends": "@osdkkit/monorepo.tsconfig/tsconfig.test.json",
-  "compilerOptions": {
-    "rootDir": "."
-  },
-  "include": [
-    "**/*"
-  ],
   "references": [
     {
       "path": "../"

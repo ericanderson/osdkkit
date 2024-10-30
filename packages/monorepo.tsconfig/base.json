@@ -22,7 +22,8 @@
     "jsx": "react-jsxdev",
 
     "rootDir": "${configDir}/src",
-    "outDir": "${configDir}/build/esm"
+    "outDir": "${configDir}/build/esm",
+    "tsBuildInfoFile": "${configDir}/build/src.tsconfig.tsbuildinfo"
   },
   "include": [
     "${configDir}/src/**/*"

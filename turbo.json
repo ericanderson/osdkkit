@@ -73,7 +73,8 @@
       "outputs": [
         "dist/**",
         "lib/**",
-        "build/{esm,cjs,browser}/*"
+        "build/{esm,cjs,browser}/*",
+        "build/*.tsbuildinfo"
       ]
     },
 

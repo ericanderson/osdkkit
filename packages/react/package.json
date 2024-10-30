@@ -13,7 +13,7 @@
     "fix-lint": "eslint . --fix && dprint fmt --config $(find-up dprint.json)",
     "lint": "eslint . && dprint check  --config $(find-up dprint.json)",
     "test": "vitest run",
-    "transpile": "tsc-absolute"
+    "transpile": "tsc-absolute && tsc-absolute --project test/tsconfig.json"
   },
   "peerDependencies": {
     "@osdk/api": "^2.0.9 || 2.0.8-rc.3",

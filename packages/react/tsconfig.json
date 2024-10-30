@@ -1,11 +1,4 @@
 {
   "extends": "@osdkkit/monorepo.tsconfig",
-  "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "build/esm"
-  },
-  "include": [
-    "./src/**/*"
-  ],
   "references": []
 }

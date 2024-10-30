@@ -96,12 +96,6 @@ function standardPackageRules(shared, options) {
         excludedReferences: ["**/*"],
         template: {
           extends: `@osdkkit/monorepo.tsconfig`,
-
-          compilerOptions: {
-            rootDir: "src",
-            outDir: "build/esm",
-          },
-          include: ["./src/**/*"],
         },
       },
     }),
@@ -116,11 +110,6 @@ function standardPackageRules(shared, options) {
         additionalReferences: ["../"],
         template: {
           extends: `@osdkkit/monorepo.tsconfig/tsconfig.test.json`,
-
-          compilerOptions: {
-            rootDir: ".",
-          },
-          include: ["**/*"],
         },
       },
     }),
@@ -143,7 +132,8 @@ function standardPackageRules(shared, options) {
           lint: "eslint . && dprint check  --config $(find-up dprint.json)",
           "fix-lint":
             "eslint . --fix && dprint fmt --config $(find-up dprint.json)",
-          "transpile": "tsc-absolute",
+          "transpile":
+            "tsc-absolute && tsc-absolute --project test/tsconfig.json",
         },
       },
     }),

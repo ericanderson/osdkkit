@@ -19,6 +19,12 @@
     "resolveJsonModule": true,
     "stripInternal": true,
     "composite": true,
-    "jsx": "react-jsxdev"
-  }
+    "jsx": "react-jsxdev",
+
+    "rootDir": "${configDir}/.",
+    "tsBuildInfoFile": "${configDir}/../build/test.tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "${configDir}/**/*"
+  ]
 }
