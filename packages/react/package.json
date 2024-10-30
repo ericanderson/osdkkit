@@ -1,6 +1,6 @@
 {
   "name": "@osdkkit/react",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "exports": {
     ".": {
       "import": "./build/esm/index.js",
