@@ -134,7 +134,6 @@ function standardPackageRules(shared, options) {
         entries: {
           exports: {
             ".": {
-              "browser": "./build/browser/index.js",
               "import": "./build/esm/index.js",
               "default": "./build/esm/index.js",
             },

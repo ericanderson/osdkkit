@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "exports": {
     ".": {
-      "browser": "./build/browser/index.js",
       "import": "./build/esm/index.js",
       "default": "./build/esm/index.js"
     }
