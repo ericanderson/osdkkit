@@ -1,6 +1,6 @@
 {
-  "name": "@osdkkit/react",
-  "version": "0.2.0",
+  "name": "@osdkkit/swr",
+  "version": "0.0.0",
   "exports": {
     ".": {
       "import": "./build/esm/index.js",
@@ -12,24 +12,22 @@
     "clean": "rm -rf lib dist types build tsconfig.tsbuildinfo",
     "fix-lint": "eslint . --fix && dprint fmt --config $(find-up dprint.json)",
     "lint": "eslint . && dprint check  --config $(find-up dprint.json)",
-    "test": "vitest run",
     "transpile": "tsc-absolute"
   },
+  "dependencies": {},
   "peerDependencies": {
     "@osdk/api": "^2.0.9 || 2.0.8-rc.3",
     "@osdk/client": "^2.0.9 || 2.0.8-rc.3",
+    "@osdkkit/react": "workspace:^",
     "react": "^17 || ^18",
-    "react-dom": "^17 || ^18"
+    "react-dom": "^17 || ^18",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
-    "@osdk/api": "2.0.9",
-    "@osdk/client": "2.0.9",
     "@osdkkit/monorepo.tsconfig": "workspace:~",
-    "@testing-library/react": "^16.0.1",
+    "@osdkkit/react": "workspace:^",
     "@types/react": "^18.3.12",
-    "happy-dom": "^15.7.4",
-    "p-defer": "^4.0.1",
-    "react": "^18.0.0",
+    "swr": "^2.2.5",
     "typescript": "~5.6.3"
   },
   "publishConfig": {
