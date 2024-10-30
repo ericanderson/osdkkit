@@ -11,6 +11,8 @@ const fakeClient = Object.assign(fakeClientFn, {
   fetchMetadata: fakeClientFn,
 } as Client);
 
-export const OsdkContext = React.createContext<{ client: Client }>({
+export const OsdkContext: React.Context<{
+  client: Client;
+}> = React.createContext<{ client: Client }>({
   client: fakeClient,
 });
