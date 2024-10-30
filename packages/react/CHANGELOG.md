@@ -1,5 +1,11 @@
 # @osdkkit/react
 
+## 0.2.1
+
+### Patch Changes
+
+- 0fec606: Code properly compiles under isolatedDeclarations
+
 ## 0.2.0
 
 ### Minor Changes
