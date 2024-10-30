@@ -9,7 +9,8 @@
   },
   "exports": {
     ".": "./base.json",
-    "./base.json": "./base.json"
+    "./base.json": "./base.json",
+    "./tsconfig.test.json": "./tsconfig.test.json"
   },
   "scripts": {},
   "dependencies": {},

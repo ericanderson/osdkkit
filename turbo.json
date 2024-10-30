@@ -51,7 +51,7 @@
 
     "@osdkkit/monorepo.tsconfig#typecheck": {
       "outputLogs": "new-only",
-      "inputs": ["tsconfig.base.json"]
+      "inputs": ["*.json"]
     },
 
     "build": {

@@ -21,8 +21,6 @@
     "editor.formatOnSave": true,
     "typescript.preferences.autoImportSpecifierExcludeRegexes": [
         "\\.\\./build",
-        "\\.\\./src",
-        "\\.\\./.*?/src",
         "\\.\\./.*?/build",
         "\\./index.js"
     ],

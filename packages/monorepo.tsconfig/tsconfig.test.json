@@ -4,6 +4,7 @@
 
     "module": "NodeNext",
     "moduleResolution": "nodenext",
+    "noEmit": true,
 
     "declarationMap": true,
     "declaration": true,

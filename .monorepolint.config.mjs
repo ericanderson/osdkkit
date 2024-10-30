@@ -106,6 +106,25 @@ function standardPackageRules(shared, options) {
       },
     }),
 
+    standardTsconfig({
+      ...shared,
+
+      options: {
+        file: "test/tsconfig.json",
+
+        excludedReferences: ["**/*"],
+        additionalReferences: ["../"],
+        template: {
+          extends: `@osdkkit/monorepo.tsconfig/tsconfig.test.json`,
+
+          compilerOptions: {
+            rootDir: ".",
+          },
+          include: ["**/*"],
+        },
+      },
+    }),
+
     requireDependency({
       ...shared,
       options: {
@@ -167,6 +186,11 @@ function standardPackageRules(shared, options) {
             test: {
               pool: "forks",
               exclude: [...configDefaults.exclude, "**/build/**/*"],
+              environment: "happy-dom",
+              typecheck: {
+                enabled: true,
+                tsconfig: "test/tsconfig.json",
+              },
             },
           });
      
