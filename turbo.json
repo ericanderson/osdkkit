@@ -23,7 +23,7 @@
         "tsconfig.json"
       ],
       "outputs": [],
-      "dependsOn": ["//#global-eslint-config", "//#dprint"]
+      "dependsOn": ["//#global-eslint-config", "//#global-dprint-config"]
     },
 
     "check-spelling": {
