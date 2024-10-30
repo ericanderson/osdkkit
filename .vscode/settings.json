@@ -1,0 +1,30 @@
+{
+    "[javascript]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "editor.defaultFormatter": "dprint.dprint",
+    "editor.formatOnSave": true,
+    "typescript.preferences.autoImportSpecifierExcludeRegexes": [
+        "\\.\\./build",
+        "\\.\\./src",
+        "\\.\\./.*?/src",
+        "\\.\\./.*?/build",
+        "\\./index.js"
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
+}

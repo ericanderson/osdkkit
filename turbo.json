@@ -1,0 +1,116 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "stream",
+  "tasks": {
+    "codegen": {
+      "outputLogs": "new-only"
+    }, // empty for overriding
+
+    "fix-lint": {
+      "cache": false
+    },
+
+    "//#cspell:all": {
+      "cache": false
+    },
+
+    "lint": {
+      "outputLogs": "new-only",
+      "inputs": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        ".eslintrc.cjs",
+        "tsconfig.json"
+      ],
+      "outputs": [],
+      "dependsOn": ["//#global-eslint-config", "//#dprint"]
+    },
+
+    "check-spelling": {
+      "outputLogs": "new-only",
+      "inputs": ["**/*.{ts,tsx,cts,mts,md,json,js,mjs,cjs}"]
+    },
+
+    "clean": {
+      "cache": false
+    },
+
+    // left around for muscle memory
+    "typecheck": {
+      "dependsOn": [
+        "transpile"
+      ]
+    },
+
+    "api-docs": {
+      "outputLogs": "new-only",
+      "inputs": ["temp/**/*"],
+      "outputs": ["api-docs/**/*"],
+      "dependsOn": ["check-api"]
+    },
+
+    "@osdkkit/monorepo.tsconfig#typecheck": {
+      "outputLogs": "new-only",
+      "inputs": ["tsconfig.base.json"]
+    },
+
+    "build": {
+      "dependsOn": ["transpile", "typecheck"]
+    },
+
+    "transpile": {
+      "outputLogs": "new-only",
+      "dependsOn": [
+        "@osdkkit/monorepo.tsconfig#typecheck",
+        "^typecheck",
+        "codegen"
+      ],
+      "inputs": [
+        "bin/**",
+        "src/**",
+        "tsconfig.json"
+      ],
+      "outputs": [
+        "dist/**",
+        "lib/**",
+        "build/{esm,cjs,browser}/*"
+      ]
+    },
+
+    "test": {
+      "outputLogs": "new-only",
+      "env": ["FORCE_COLOR"],
+      "dependsOn": ["transpile", "typecheck"]
+    },
+
+    "//#check-mrl": {
+      "inputs": [
+        "package.json",
+        ".monorepolint.config.mjs",
+        "packages/*/package.json",
+        "packages/*/tsconfig.json"
+      ]
+    },
+
+    "check": {
+      "dependsOn": [
+        "//#check-mrl",
+        "lint",
+        "transpile",
+        "typecheck",
+        "test",
+        "check-spelling"
+      ]
+    },
+
+    /* Psuedo task to let us depend on dprint config */
+    "//#global-dprint-config": {
+      "outputLogs": "new-only",
+      "inputs": ["dprint.json"]
+    },
+
+    "//#global-eslint-config": {
+      "inputs": ["eslint.config.mjs"]
+    }
+  }
+}
