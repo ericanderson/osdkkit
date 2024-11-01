@@ -138,6 +138,30 @@ importers:
         specifier: ~5.6.3
         version: 5.6.3
 
+  packages/react-table:
+    devDependencies:
+      '@osdk/api':
+        specifier: 2.0.9
+        version: 2.0.9
+      '@osdk/client':
+        specifier: 2.0.9
+        version: 2.0.9
+      '@osdkkit/monorepo.tsconfig':
+        specifier: workspace:~
+        version: link:../monorepo.tsconfig
+      '@tanstack/react-table':
+        specifier: ^8.20.5
+        version: 8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/react':
+        specifier: ^18
+        version: 18.3.12
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
+      typescript:
+        specifier: ~5.6.3
+        version: 5.6.3
+
   packages/swr:
     dependencies:
       '@osdk/api':
@@ -157,7 +181,7 @@ importers:
         specifier: workspace:~
         version: link:../monorepo.tsconfig
       '@osdkkit/react':
-        specifier: workspace:^
+        specifier: workspace:~
         version: link:../react
       '@types/react':
         specifier: ^18.3.12
@@ -165,6 +189,36 @@ importers:
       swr:
         specifier: ^2.2.5
         version: 2.2.5(react@18.3.1)
+      typescript:
+        specifier: ~5.6.3
+        version: 5.6.3
+
+  packages/swr-react-table:
+    devDependencies:
+      '@osdk/api':
+        specifier: 2.0.9
+        version: 2.0.9
+      '@osdk/client':
+        specifier: 2.0.9
+        version: 2.0.9
+      '@osdkkit/monorepo.tsconfig':
+        specifier: workspace:~
+        version: link:../monorepo.tsconfig
+      '@osdkkit/react-table':
+        specifier: workspace:~
+        version: link:../react-table
+      '@osdkkit/swr':
+        specifier: workspace:~
+        version: link:../swr
+      '@tanstack/react-table':
+        specifier: ^8.20.5
+        version: 8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/react':
+        specifier: ^18
+        version: 18.3.12
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
       typescript:
         specifier: ~5.6.3
         version: 5.6.3
@@ -903,6 +957,17 @@ packages:
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
+
+  '@tanstack/react-table@8.20.5':
+    resolution: {integrity: sha512-WEHopKw3znbUZ61s9i0+i9g8drmDo6asTWbrQh8Us63DAk/M0FkmIqERew6P71HI75ksZ2Pxyuf4vvKh9rAkiA==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+
+  '@tanstack/table-core@8.20.5':
+    resolution: {integrity: sha512-P9dF7XbibHph2PFRz8gfBKEXEY/HJPOhym8CHmjF8y3q5mWpKx9xtZapXQUWCgkqvsK0R46Azuz+VaxD4Xl+Tg==}
+    engines: {node: '>=12'}
 
   '@testing-library/dom@10.4.0':
     resolution: {integrity: sha512-pemlzrSESWbdAloYml3bAJMEfNh1Z7EduzqPKprCH5S341frlpYnUEW0H72dLxa6IsYr+mPno20GiSm+h9dEdQ==}
@@ -3645,6 +3710,14 @@ snapshots:
   '@sinclair/typebox@0.27.8': {}
 
   '@sindresorhus/merge-streams@2.3.0': {}
+
+  '@tanstack/react-table@8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@tanstack/table-core': 8.20.5
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@tanstack/table-core@8.20.5': {}
 
   '@testing-library/dom@10.4.0':
     dependencies:

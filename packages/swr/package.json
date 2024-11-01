@@ -18,14 +18,14 @@
   "peerDependencies": {
     "@osdk/api": "^2.0.9 || 2.0.8-rc.3",
     "@osdk/client": "^2.0.9 || 2.0.8-rc.3",
-    "@osdkkit/react": "workspace:^",
+    "@osdkkit/react": "workspace:~",
     "react": "^17 || ^18",
     "react-dom": "^17 || ^18",
     "swr": "^2.2.5"
   },
   "devDependencies": {
     "@osdkkit/monorepo.tsconfig": "workspace:~",
-    "@osdkkit/react": "workspace:^",
+    "@osdkkit/react": "workspace:~",
     "@types/react": "^18.3.12",
     "swr": "^2.2.5",
     "typescript": "~5.6.3"

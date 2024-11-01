@@ -1,0 +1,4 @@
+{
+  "extends": "@osdkkit/monorepo.tsconfig",
+  "references": []
+}
